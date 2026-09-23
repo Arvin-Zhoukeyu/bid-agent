@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e2c">
+  <title>标策 BidPilot · 投标响应辅助 Agent</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard"><span class="brand-icon">标</span><span><strong>标策</strong><small>BidPilot / Agent Workspace</small></span></a>
+      <div class="workspace-label">工作空间 <span>BIDPILOT</span></div>
+      <nav aria-label="主导航">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">◫</span> 总览</button>
+        <button class="nav-item" data-view="workbench"><span class="nav-icon">▤</span> 项目工作台</button>
+        <button class="nav-item" data-view="library"><span class="nav-icon">▦</span> 企业材料库</button>
+        <button class="nav-item" data-view="evaluation"><span class="nav-icon">◇</span> 效果评测</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-note"><span class="note-dot"></span><div><strong>投标响应工作台</strong><small>条款 · 证据 · 草稿</small></div></div>
+        <div class="sidebar-foot">BidPilot <span>v1.0</span></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">标策 <span>/</span> <span id="crumb">总览</span></div><div class="top-right"><span class="top-pill" id="model-pill">检测中</span><span class="avatar">PM</span></div></header>
+      <div id="operation-status" class="operation-status" role="status" aria-live="polite" hidden></div>
+      <div id="content" class="content" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="upload-dialog" class="modal"><form id="project-form" method="dialog"><div class="modal-head"><div><span class="eyebrow">NEW PROJECT</span><h2>新建投标项目</h2></div><button type="button" class="icon-button" data-close>×</button></div><label>项目名称<input name="name" placeholder="例如：智慧园区运维服务项目" required></label><label>采购方<input name="customer" placeholder="例如：某某科技园"></label><label>招标文件<input name="file" type="file" accept=".txt,.md,.pdf,.docx" required><small>支持文字型 TXT / PDF / DOCX，最大 10 MB</small></label><div class="modal-progress" role="status" aria-live="polite" hidden></div><div class="modal-actions"><button type="button" class="button ghost" data-close>取消</button><button type="submit" class="button primary">上传并分析</button></div></form></dialog>
+  <dialog id="library-dialog" class="modal"><form id="library-form" method="dialog"><div class="modal-head"><div><span class="eyebrow">KNOWLEDGE BASE</span><h2 id="library-dialog-title">添加企业材料</h2></div><button type="button" class="icon-button" data-close>×</button></div><div id="library-context" class="material-context" hidden></div><label>材料名称<input name="name" placeholder="例如：2025 年项目案例集" required></label><div class="form-grid"><label>材料类型<select name="type"><option>案例</option><option>资质</option><option>产品方案</option><option>模板</option><option>其他</option></select></label><label>有效期<input name="valid_until" type="date"></label></div><label>粘贴材料正文<textarea name="text" rows="5" placeholder="可粘贴材料正文，或选择下方文件"></textarea></label><label>或上传文件<input name="file" type="file" accept=".txt,.md,.pdf,.docx"></label><div class="modal-progress" role="status" aria-live="polite" hidden></div><div class="modal-actions"><button type="button" class="button ghost" data-close>取消</button><button type="submit" class="button primary">保存材料</button></div></form></dialog>
+  <dialog id="material-detail-dialog" class="modal material-modal" aria-labelledby="material-title"><div class="material-dialog-inner"><div class="modal-head"><div><span class="eyebrow">MATERIAL DETAIL</span><h2 id="material-title"></h2><p id="material-meta" class="material-meta"></p></div><button type="button" class="icon-button" data-close aria-label="关闭材料详情">×</button></div><div class="detail-label">材料正文</div><div id="material-body" class="material-body"></div><div class="modal-actions"><button type="button" class="button ghost" data-close>关闭</button></div></div></dialog>
+  <script src="/evaluation.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

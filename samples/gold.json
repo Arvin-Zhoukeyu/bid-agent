@@ -1,0 +1,199 @@
+{
+  "description": "内置基线集人工标注。evidence_ids 为期望首要材料 ID；空数组表示无合适材料。",
+  "projects": [
+    {
+      "file": "tender_government.txt",
+      "gold": [
+        {
+          "needle": "营业执照",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-license"
+          ]
+        },
+        {
+          "needle": "三个政务信息化运维",
+          "expected_status": "gap",
+          "evidence_ids": [
+            "lib-cases-gov"
+          ]
+        },
+        {
+          "needle": "信息系统项目管理师",
+          "expected_status": "gap",
+          "evidence_ids": []
+        },
+        {
+          "needle": "7×24小时",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        },
+        {
+          "needle": "4小时内恢复",
+          "expected_status": "gap",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        },
+        {
+          "needle": "每日备份",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-backup"
+          ]
+        },
+        {
+          "needle": "季度安全巡检",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-backup"
+          ]
+        },
+        {
+          "needle": "项目实施计划",
+          "expected_status": "review",
+          "evidence_ids": [
+            "lib-implementation"
+          ]
+        },
+        {
+          "needle": "服务团队人员清单",
+          "expected_status": "review",
+          "evidence_ids": [
+            "lib-team"
+          ]
+        },
+        {
+          "needle": "2026年10月20日",
+          "expected_status": "action",
+          "evidence_ids": []
+        }
+      ],
+      "split": "基线集"
+    },
+    {
+      "file": "tender_campus.txt",
+      "gold": [
+        {
+          "needle": "营业执照",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-license"
+          ]
+        },
+        {
+          "needle": "两个高校数据治理",
+          "expected_status": "gap",
+          "evidence_ids": [
+            "lib-campus"
+          ]
+        },
+        {
+          "needle": "多源数据接入",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "数据质量规则",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "访问权限控制",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "元数据管理",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "数据迁移与验收方案",
+          "expected_status": "review",
+          "evidence_ids": [
+            "lib-migration"
+          ]
+        },
+        {
+          "needle": "一年的运维服务",
+          "expected_status": "gap",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        },
+        {
+          "needle": "2小时内响应",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        }
+      ],
+      "split": "基线集"
+    },
+    {
+      "file": "tender_holdout.txt",
+      "gold": [
+        {
+          "needle": "营业执照",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-license"
+          ]
+        },
+        {
+          "needle": "信息系统项目管理师",
+          "expected_status": "gap",
+          "evidence_ids": []
+        },
+        {
+          "needle": "多源数据接入",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "数据质量报告",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-platform"
+          ]
+        },
+        {
+          "needle": "7×24小时",
+          "expected_status": "supported",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        },
+        {
+          "needle": "项目实施计划",
+          "expected_status": "review",
+          "evidence_ids": [
+            "lib-implementation"
+          ]
+        },
+        {
+          "needle": "一年的运维服务",
+          "expected_status": "gap",
+          "evidence_ids": [
+            "lib-service"
+          ]
+        }
+      ],
+      "split": "基线集"
+    }
+  ]
+}

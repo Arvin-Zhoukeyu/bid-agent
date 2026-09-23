@@ -1,0 +1,83 @@
+{
+  "description": "新增独立场景与挑战集。evidence_ids 是可作为首要检索依据的材料 ID；空数组表示没有合适的首要材料。",
+  "projects": [
+    {
+      "file": "test_tenders/01_政务服务平台运维_招标文件.txt",
+      "split": "场景集",
+      "gold": [
+        {"needle":"有效期内的营业执照","expected_status":"supported","evidence_ids":["lib-license"]},
+        {"needle":"三个政务信息化运维类项目案例","expected_status":"gap","evidence_ids":["lib-cases-gov"]},
+        {"needle":"信息系统项目管理师证书","expected_status":"gap","evidence_ids":[]},
+        {"needle":"7×24小时故障受理","expected_status":"supported","evidence_ids":["lib-service"]},
+        {"needle":"2小时内响应","expected_status":"supported","evidence_ids":["lib-service"]},
+        {"needle":"4小时内恢复核心服务","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"每日备份一次","expected_status":"supported","evidence_ids":["lib-backup"]},
+        {"needle":"季度安全巡检","expected_status":"supported","evidence_ids":["lib-backup"]},
+        {"needle":"项目实施计划","expected_status":"review","evidence_ids":["lib-implementation"]},
+        {"needle":"服务团队人员清单","expected_status":"review","evidence_ids":["lib-team"]},
+        {"needle":"2026年11月18日","expected_status":"action","evidence_ids":[]}
+      ]
+    },
+    {
+      "file": "test_tenders/02_高校数据治理平台_招标文件.txt",
+      "split": "场景集",
+      "gold": [
+        {"needle":"有效营业执照","expected_status":"supported","evidence_ids":["lib-license"]},
+        {"needle":"两个高校数据治理项目","expected_status":"gap","evidence_ids":["lib-campus"]},
+        {"needle":"多源数据接入","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"数据质量规则配置","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"访问权限控制","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"数据目录和元数据管理","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"数据迁移与验收方案","expected_status":"review","evidence_ids":["lib-migration"]},
+        {"needle":"一年的运维服务","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"2小时内响应","expected_status":"supported","evidence_ids":["lib-service"]},
+        {"needle":"2026年12月3日","expected_status":"action","evidence_ids":[]}
+      ]
+    },
+    {
+      "file": "test_tenders/03_智慧园区综合运维_招标文件.txt",
+      "split": "场景集",
+      "gold": [
+        {"needle":"有效营业执照","expected_status":"supported","evidence_ids":["lib-license"]},
+        {"needle":"三个同类园区平台运维项目案例","expected_status":"gap","evidence_ids":[]},
+        {"needle":"7×24小时故障受理","expected_status":"supported","evidence_ids":["lib-service"]},
+        {"needle":"4小时内恢复核心服务","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"每日备份","expected_status":"supported","evidence_ids":["lib-backup"]},
+        {"needle":"每季度开展一次安全巡检","expected_status":"supported","evidence_ids":["lib-backup"]},
+        {"needle":"项目实施计划","expected_status":"review","evidence_ids":["lib-implementation"]},
+        {"needle":"服务团队人员清单","expected_status":"review","evidence_ids":["lib-team"]},
+        {"needle":"一年的运维服务承诺","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"2026年12月15日","expected_status":"action","evidence_ids":[]}
+      ]
+    },
+    {
+      "file": "tender_challenge_conditions.txt",
+      "split": "挑战集",
+      "gold": [
+        {"needle":"统一社会信用代码","expected_status":"review","evidence_ids":["lib-license"]},
+        {"needle":"客户验收证明","expected_status":"gap","evidence_ids":["lib-cases-gov"]},
+        {"needle":"信息系统项目管理师证书及在职证明","expected_status":"gap","evidence_ids":[]},
+        {"needle":"两名驻场工程师","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"1小时内完成恢复","expected_status":"gap","evidence_ids":["lib-service"]},
+        {"needle":"信创环境适配证明","expected_status":"gap","evidence_ids":["lib-platform"]},
+        {"needle":"季度安全巡检","expected_status":"supported","evidence_ids":["lib-backup"]},
+        {"needle":"项目实施计划","expected_status":"review","evidence_ids":["lib-implementation"]},
+        {"needle":"2026年12月20日","expected_status":"action","evidence_ids":[]}
+      ]
+    },
+    {
+      "file": "tender_challenge_layout.txt",
+      "split": "挑战集",
+      "gold": [
+        {"needle":"有效营业执照","expected_status":"supported","evidence_ids":["lib-license"]},
+        {"needle":"两个高校数据治理项目案例","expected_status":"gap","evidence_ids":["lib-campus"]},
+        {"needle":"多源数据接入","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"访问权限控制","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"数据质量规则配置","expected_status":"supported","evidence_ids":["lib-platform"]},
+        {"needle":"数据迁移与验收方案","expected_status":"review","evidence_ids":["lib-migration"]},
+        {"needle":"服务团队人员清单","expected_status":"review","evidence_ids":["lib-team"]},
+        {"needle":"2027年1月8日","expected_status":"action","evidence_ids":[]}
+      ]
+    }
+  ]
+}
